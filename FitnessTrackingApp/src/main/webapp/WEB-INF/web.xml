@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+
+    <!-- Servlet for adding workouts -->
+    <servlet>
+        <servlet-name>AddWorkoutServlet</servlet-name>
+        <servlet-class>com.mycompany.fitnesstrackingapp.AddWorkoutServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AddWorkoutServlet</servlet-name>
+        <url-pattern>/WorkoutServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Servlet for viewing workouts -->
+    <servlet>
+        <servlet-name>ViewWorkoutsServlet</servlet-name>
+        <servlet-class>com.mycompany.fitnesstrackingapp.ViewWorkoutsServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ViewWorkoutsServlet</servlet-name>
+        <url-pattern>/viewworkouts</url-pattern>
+    </servlet-mapping>
+
+</web-app>
